@@ -1,33 +1,53 @@
 
-import "./App.css"
-/*  空標籤:Fragment */
-function MyComponent() {
-  return(
-
-  <>
-  <h2>我是元件2</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ratione inventore minus nobis enim quaerat illum modi impedit ducimus tempora molestiae, harum cupiditate deserunt corporis, ipsam officia velit eaque dolore?</p>
-  </>
-  )
+function Component(){
+  return  <h1>Hello,React</h1>
 }
-function App() {
 
-// 建立變數
-const strName="建仔";
+function App(){
+  // 建立陣列(可以是任何形式資料 => 元件)
+  // 同一個陣列中，key屬性的值不可重覆
+const listItem = [
+ <Component key="0"/>,
+ <Component key="1"/>,
+ <Component key="2"/>,
+]
+const listBook = [
+  {bookName:'HTML', id:'book1'},
+  {bookName:'CSS', id:'book2'},
+  {bookName:'Javascript', id:'book3'},
+]
+
+// 過濾出陣列中，除了CSS的書本
+const filterBooks = listBook.filter((book)=>{
+  //   if(book.bookName !== 'CSS'){
+  //     return true
+  //   }else{
+  //     return false
+  //   }
+  // 三元運算子的判斷式(只能用在單層判斷不能超過2個運算式)
+  // 判斷式?條件成立:條件不成立
+  return book.bookName !== 'CSS' ? true :false
+  })
   return (
-    <div> 
-      {/* JSX中使用javascript變數，前後加大括號{變數名稱} */}
-      <h1 className="myH1" style={{
-        color:'red',
-        background:'yellow',
-        width:'300px',
-      }}>{strName.toUpperCase()}, 午安</h1>
-      {{/* 屬性中使用變數 */}}
-      <label htmlFor="userName">請輸入姓名:</label>
-      {/* {placeholdder => 提示字} */}
-      <input type="text" id="userName" placeholder={strName}/>
-     { {/* <MyComponent/> */}}
-      </div>
+    <> 
+    {/* 使用陣列方法1 */}
+    {listItem}
+<hr />
+{/* 使用陣列方法2 => map() => 此方法可以把一個陣列轉換成另一個陣列 */}
+{
+    listBook.map((book) => {
+      return <div key={book.id}>{book.bookName}</div>
+
+    })
+  }
+  <hr />
+  {/* 使用filter()r過濾陣列資料 */}
+  {
+    filterBooks.map((book) =>{
+      return <div key={book.id}>{book.bookName}</div>
+    })
+  }
+  </>
   )
 }
 

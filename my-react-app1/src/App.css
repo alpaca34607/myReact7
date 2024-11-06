@@ -1,6 +1,7 @@
 h2{
     font-size: 50px;
 }
-.myH1{
-    text-decoration:3px double blue;
+.unLineColor{
+    border-bottom:3px double blue;
+ 
 }
