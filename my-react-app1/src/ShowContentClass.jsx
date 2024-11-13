@@ -37,6 +37,7 @@ function ShowContentClass() {
             {
                 contentClassData.map((item) => {
                     return (
+                        <div className="class">
                         <div className="classboxinner" key={item.id}>
                             <p><img src={item.imgURL} alt="課程" className="classimg" /></p>
 
@@ -46,6 +47,7 @@ function ShowContentClass() {
                             <p className="time">{item.time}</p>
                             <p><span className="price">{item.price}</span><span className="discount">{item.discount}</span></p>
                             <button>付款上課去</button>
+                        </div>
                         </div>
 
                     )
