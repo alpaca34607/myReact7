@@ -65,15 +65,15 @@ function App() {
 
 
         <div class="infobox" >
-          <div class="infobox1">
+          <div class="infoboxinner">
             <h1>{`${info1.h1}`}</h1>
             <p>{`${info1.word}`}</p>
           </div>
-          <div class="infobox2">
+          <div class="infoboxinner">
             <h1>{`${other.info2.h1}`}</h1>
             <p>{`${other.info2.word}`}</p>
           </div>
-          <div class="infobox3">
+          <div class="infoboxinner">
             <h1>{`${other.info3.h1}`}</h1>
             <p>{`${other.info3.word}`}</p>
           </div>
