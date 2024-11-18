@@ -57,3 +57,16 @@ body{
     cursor:pointer;
 
 }
+
+.todo {
+    background-color: #ccc;
+    color:#333;
+    height: 40px;
+    padding: 0 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
