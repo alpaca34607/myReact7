@@ -70,3 +70,9 @@ body{
     align-items: center;
 
 }
+
+/* 點擊todo內容的變化:完成的樣子 */
+.completed{
+    opacity: .6;
+    text-decoration: line-through 3px grey;
+}
