@@ -1,0 +1,38 @@
+img {
+    display: block;
+  width: 100%;
+  justify-content:center;
+
+}
+.wrap{
+    clear: both;
+    display: wrap;
+    flex-direction: column;
+}
+.weatherbox{
+    border-style:solid;
+    Box-sizing:Border-box;
+    border-color:black;
+    width:80%;
+    margin:20px auto;
+    padding: 0 40px;
+    justify-content:center;
+    display:flex;
+    text-align: center;
+}
+.innerweather{
+    display: column;
+    justify-content:space-between;
+
+
+}
+.weatherbox h3{
+    color: rgb(0, 0, 0);
+
+
+   
+}
+.city{
+    margin: 0 auto;
+    background-color:rgb(212, 212, 212);
+}

@@ -34,7 +34,7 @@ function App(){
 const changeColor= () => {
   let p1c=document.getElementById('p1');
 // 再變色
-p1a.style.color="green";
+p1c.style.color="green";
 }
   return(
     <>

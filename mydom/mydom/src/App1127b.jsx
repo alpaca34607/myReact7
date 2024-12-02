@@ -3,7 +3,7 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     const p1 = document.getElementById('p1');
-    
+
     // 添加 mouseover 事件監聽器
     p1.addEventListener('mouseover', () => {
       p1.style.color = "blue";
@@ -39,16 +39,12 @@ function App() {
       }
     });
 
-    // 清理事件監聽器，防止內存洩漏
-    return () => {
-      p1.removeEventListener('mouseover', () => {});
-      p1.removeEventListener('mouseout', () => {});
-      p2.removeEventListener('mouseover', () => {});
-      p2.removeEventListener('mouseout', () => {});
-      h1.removeEventListener('click', () => {});
-    };
-  }, []);
-
+ 
+  // h1.addEventListener('click', () => { 
+  // const h1Text = h1.textContent;
+  // alert(h1Text);
+  // })
+}, []);
   return (
     <>
       <h1 id="h1">滑鼠事件</h1>
