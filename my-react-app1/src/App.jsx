@@ -11,7 +11,7 @@ function App() {
       console.log(data);
       // const { location } = data.data.cwaopendata.datatest;
       // console.log(location);
-    })
+    })()
   }, [])
   return (
 
@@ -37,7 +37,8 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                      {/* <img src="./public/weatherIcon/晴時多雲.svg" alt="" /> */}
+                    <img src="./weatherIcon/晴時多雲.svg" alt="" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -47,7 +48,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -57,7 +58,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -84,7 +85,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -94,7 +95,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -104,7 +105,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -130,7 +131,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -140,7 +141,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -150,7 +151,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -177,7 +178,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -187,7 +188,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
@@ -197,7 +198,7 @@ function App() {
                     <p>上午 6:00<br />
                       ~<br />
                       下午 6:00</p>
-                    <img src="./public/weatherIcon/晴時多雲.svg" />
+                    <img src="./weatherIcon/晴時多雲.svg" />
 
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
