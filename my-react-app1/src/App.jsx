@@ -6,11 +6,9 @@ import { IoIosUmbrella } from "react-icons/io";
 function App() {
   useEffect(() => {
     (async () => {
+      const data = await axios.get('https://alpaca34607.github.io/myReact7/json/F-C0032-001.json');
+        console.log(data);
      
-        const response = await axios.get('https://alpaca34607.github.io/myReact7/json/F-C0032-001.json');
-        
-
-      
     })();
   }, []);
 
