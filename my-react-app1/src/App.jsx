@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const data = await axios.get('json/F-C0032-001.json');
+      const data = await axios.get('https://github.com/alpaca34607/myReact7/blob/gh-pages/json/F-C0032-001.json');
       console.log(data);
       const { location } = data.data.cwaopendata.datatest;
       console.log(location);
