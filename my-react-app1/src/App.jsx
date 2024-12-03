@@ -8,11 +8,11 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      try {
+     
         const response = await axios.get('https://github.com/alpaca34607/myReact7/json/F-C0032-001.json');
         const { location } = response.data.cwaopendata.dataset;
-        
-      }
+
+      
     })();
   }, []);
 
