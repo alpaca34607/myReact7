@@ -8,7 +8,7 @@ function App() {
     (async () => {
      
         const response = await axios.get('https://alpaca34607.github.io/myReact7/json/F-C0032-001.json');
-        const { location } = response.data.cwaopendata.dataset;
+        
 
       
     })();
