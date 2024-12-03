@@ -4,8 +4,6 @@ import axios from 'axios';
 import { IoIosUmbrella } from "react-icons/io";
 
 function App() {
-  const [weatherData, setWeatherData] = useState(null);
-
   useEffect(() => {
     (async () => {
      
