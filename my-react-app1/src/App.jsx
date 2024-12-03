@@ -1,18 +1,24 @@
 import './App.css';
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import axios from 'axios';
 import { IoIosUmbrella } from "react-icons/io";
 
 function App() {
+  const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
     (async () => {
-      const data = await axios.get('https://alpaca34607.github.io/myReact/json/F-C0032-001.json');
-      console.log(data);
-      // const { location } = data.data.cwaopendata.datatest;
-      // console.log(location);
-    })()
-  }, [])
+      try {
+        const response = await axios.get('https://github.com/alpaca34607/myReact7/blob/gh-pages/json/F-C0032-001.json');
+        const { location } = response.data.cwaopendata.dataset;
+        setWeatherData(location); // 設置資料到狀態中
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    })();
+  }, []);
+
+
   return (
 
     <>
@@ -20,6 +26,7 @@ function App() {
         <h2>36小時天氣預報</h2>
         {/*一列兩欄*/}
         <div className="row">
+          
           {/* 第一欄 */}
           <div className="col">
             {/* 一個大方盒 */}
@@ -28,7 +35,7 @@ function App() {
               {/* 卡片樣式 */}
               <div className="card">
                 {/* 標題 */}
-                <div className="city"><h3>台北市</h3></div>
+                <div className="city"><h3> 台北市 </h3></div> {/*city.locationName */}
                 {/* 內容 */}
                 <div className="weatherbox">
                   {/* 一列三欄 */}
@@ -210,14 +217,6 @@ function App() {
         </div>
         
       </div>
-
-
-
-
-
-
-
-
     </>
   )
 }
