@@ -30,7 +30,7 @@ function App() {
 
               {/* 卡片樣式 */}
               <div className="card">
-                {/* 標題 */}
+                {/* 標題 */} 
                 <div className="city"><h3> 台北市 </h3></div> {/*city.locationName */}
                 {/* 內容 */}
                 <div className="weatherbox">
