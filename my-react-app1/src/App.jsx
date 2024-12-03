@@ -8,6 +8,9 @@ function App() {
     (async () => {
       const data = await axios.get('https://alpaca34607.github.io/myReact7/json/F-C0032-001.json');
         console.log(data);
+        const { location } = data.data.cwaopendata.datatest;
+         console.log(location);
+
      
     })();
   }, []);
