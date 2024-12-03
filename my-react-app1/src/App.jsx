@@ -9,11 +9,9 @@ function App() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get('https://github.com/alpaca34607/myReact7/blob/gh-pages/json/F-C0032-001.json');
+        const response = await axios.get('https://github.com/alpaca34607/myReact7/json/F-C0032-001.json');
         const { location } = response.data.cwaopendata.dataset;
-        setWeatherData(location); // 設置資料到狀態中
-      } catch (error) {
-        console.error('Error fetching data:', error);
+        
       }
     })();
   }, []);
