@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     (async () => {
      
-        const response = await axios.get('https://alpaca34607.github.io/myReact7/json/F-C0032-001.json');
+        const response = await axios.get('https://github.com/alpaca34607/myReact7/tree/gh-pages/json');
         const { location } = response.data.cwaopendata.dataset;
 
       
