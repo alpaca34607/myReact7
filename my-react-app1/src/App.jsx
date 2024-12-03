@@ -1,12 +1,13 @@
 import './App.css';
 import { useEffect, useState } from "react"
 import axios from 'axios';
+import { IoIosUmbrella } from "react-icons/io";
 
 function App() {
 
   useEffect(() => {
     (async () => {
-      const data = await axios.get('./F-C0032-001.json');
+      const data = await axios.get('https://github.com/alpaca34607/myReact7/blob/main/F-C0032-001.json');
       console.log(data);
       const { location } = data.data.cwaopendata.datatest;
       console.log(location);
@@ -15,41 +16,202 @@ function App() {
   return (
 
     <>
-      <body class="wrap">
+      <div class="wrap">
         <h2>36小時天氣預報</h2>
-        
-          <div class="city"><h3>台北市</h3></div>
-          <div class="weatherbox">
-          <div class="innerweather">
-          <h3>2日</h3>
-          <p>上午 6:00</p>
-          <p>~</p>
-          <p>下午 6:00</p>
-          <img src="/weatherIcon/晴時多雲.svg" />
-          <p>晴時多雲</p>
-          <p>10%</p>
+        {/*一列兩欄*/}
+        <div class="row">
+          {/* 第一欄 */}
+          <div class="col">
+            {/* 一個大方盒 */}
+            <div class="cityweather">
+
+              {/* 卡片樣式 */}
+              <div class="card">
+                {/* 標題 */}
+                <div class="city"><h3>台北市</h3></div>
+                {/* 內容 */}
+                <div class="weatherbox">
+                  {/* 一列三欄 */}
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="cityweather">
+
+              {/* 卡片樣式 */}
+              <div class="card">
+                {/* 標題 */}
+                <div class="city"><h3>台北市</h3></div>
+                {/* 內容 */}
+                <div class="weatherbox">
+                  {/* 一列三欄 */}
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="innerweather">
-          <h3>2日</h3>
-          <p>上午 6:00</p>
-          <p>~</p>
-          <p>下午 6:00</p>
-          <img src="/weatherIcon/晴時多雲.svg" />
-          <p>晴時多雲</p>
-          <p>10%</p>
-          </div>
-          <div class="innerweather">
-          <h3>2日</h3>
-          <p>上午 6:00</p>
-          <p>~</p>
-          <p>下午 6:00</p>
-          <img src="/weatherIcon/晴時多雲.svg" />
-          <p>晴時多雲</p>
-          <p>10%</p>
+             {/* 第二欄 */}
+             <div class="col2">
+            {/* 一個大方盒 */}
+            <div class="cityweather">
+
+              {/* 卡片樣式 */}
+              <div class="card">
+                {/* 標題 */}
+                <div class="city"><h3>台北市</h3></div>
+                {/* 內容 */}
+                <div class="weatherbox">
+                  {/* 一列三欄 */}
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="cityweather">
+
+              {/* 卡片樣式 */}
+              <div class="card">
+                {/* 標題 */}
+                <div class="city"><h3>台北市</h3></div>
+                {/* 內容 */}
+                <div class="weatherbox">
+                  {/* 一列三欄 */}
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                  <div class="innerweather">
+                    <h3>2日</h3>
+                    <p>上午 6:00<br />
+                      ~<br />
+                      下午 6:00</p>
+                    <img src="./public/weatherIcon/晴時多雲.svg" />
+
+                    <p>晴時多雲</p>
+                    <p><IoIosUmbrella />10%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
-      </body>
+      </div>
+
+
+
 
 
 
