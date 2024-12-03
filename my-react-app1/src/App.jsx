@@ -16,23 +16,23 @@ function App() {
   return (
 
     <>
-      <div class="wrap">
+      <div className="wrap">
         <h2>36小時天氣預報</h2>
         {/*一列兩欄*/}
-        <div class="row">
+        <div className="row">
           {/* 第一欄 */}
-          <div class="col">
+          <div className="col">
             {/* 一個大方盒 */}
-            <div class="cityweather">
+            <div className="cityweather">
 
               {/* 卡片樣式 */}
-              <div class="card">
+              <div className="card">
                 {/* 標題 */}
-                <div class="city"><h3>台北市</h3></div>
+                <div className="city"><h3>台北市</h3></div>
                 {/* 內容 */}
-                <div class="weatherbox">
+                <div className="weatherbox">
                   {/* 一列三欄 */}
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -42,7 +42,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -52,7 +52,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -70,16 +70,16 @@ function App() {
 
 
 
-            <div class="cityweather">
+            <div className="cityweather">
 
               {/* 卡片樣式 */}
-              <div class="card">
+              <div className="card">
                 {/* 標題 */}
-                <div class="city"><h3>台北市</h3></div>
+                <div className="city"><h3>台北市</h3></div>
                 {/* 內容 */}
-                <div class="weatherbox">
+                <div className="weatherbox">
                   {/* 一列三欄 */}
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -89,7 +89,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -99,7 +99,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -114,18 +114,18 @@ function App() {
             </div>
           </div>
              {/* 第二欄 */}
-             <div class="col2">
+             <div className="col2">
             {/* 一個大方盒 */}
-            <div class="cityweather">
+            <div className="cityweather">
 
               {/* 卡片樣式 */}
-              <div class="card">
+              <div className="card">
                 {/* 標題 */}
-                <div class="city"><h3>台北市</h3></div>
+                <div className="city"><h3>台北市</h3></div>
                 {/* 內容 */}
-                <div class="weatherbox">
+                <div className="weatherbox">
                   {/* 一列三欄 */}
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -135,7 +135,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -145,7 +145,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -163,16 +163,16 @@ function App() {
 
 
 
-            <div class="cityweather">
+            <div className="cityweather">
 
               {/* 卡片樣式 */}
-              <div class="card">
+              <div className="card">
                 {/* 標題 */}
-                <div class="city"><h3>台北市</h3></div>
+                <div className="city"><h3>台北市</h3></div>
                 {/* 內容 */}
-                <div class="weatherbox">
+                <div className="weatherbox">
                   {/* 一列三欄 */}
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -182,7 +182,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
@@ -192,7 +192,7 @@ function App() {
                     <p>晴時多雲</p>
                     <p><IoIosUmbrella />10%</p>
                   </div>
-                  <div class="innerweather">
+                  <div className="innerweather">
                     <h3>2日</h3>
                     <p>上午 6:00<br />
                       ~<br />
