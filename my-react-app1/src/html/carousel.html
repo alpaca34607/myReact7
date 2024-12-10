@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<style>
+    #carousel{
+        background-color: #ccc;
+    }
+    #carousel img {
+        width: 150px;
+        height: 100px;
+        margin-right:10px;
+        vertical-align: top; /* 取消垂直排列可以取消圖片下方預設的留白區 */
+    }
+    
+</style>
+
+<div id="carousel">
+    <ul>
+        <li><img src="./images/01.jpg " alt=""></li>
+        <li><img src="./images/03.jpg " alt=""></li>
+        <li> <img src="./images/05.jpg " alt=""></li>
+        <li><img src="./images/06.jpg " alt=""></li>
+        <li> <img src="./images/07.jpg " alt=""></li>
+    </ul>
+
+</div>
+
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/jquery.jcarousellite.min.js"></script>
+<script>
+    $(function(){
+        $('#carousel').jCarouselLite({
+            auto:2000, //多久時間動一下
+            speed:1000, //輪播的速度
+            scroll:3, //一次輪播的張數(不寫的話預設為一張)(建議值<=visible的值)
+            visible: 2, //看見的張數
+        })
+    })
+</script>
+
+</html>
