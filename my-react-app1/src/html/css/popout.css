@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper{
+    padding: 50px 0;
+    width: 600px;
+    text-align: justify;
+
+
+
+}
+
+
+.btnArea{
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+p{
+    padding-bottom: 2rem;
+    font-size:1em;
+    line-height:1.8em;
+
+}
+
+
+/* 開啟彈窗後的模式 */
+
+
+
+.modal-btn{
+padding: 15px 20px;
+color:#444;
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+display:inline-block;
+overflow: hidden;
+background: #ececec;
+border:#fff 1px solid;
+border-radius: 5px;
+box-shadow: 0 0 3px #666;
+transition: all 0.2s ease-in-out;
+
+}
+
+.modal-btn:hover{
+    opacity: 0.7;
+
+}
+
+#mdoverlay{
+    top:0;
+    left:0;
+    width:100%;
+    position: fixed;
+    z-index: 97;
+    background: #000;
+
+}
+
+/* 談出視窗頁面置中 */
+#mdWindow{
+    margin-top: -200px;
+    margin-left: -250px;
+    top:50%;
+    left:50%;
+    width:500px;
+    height:400px;
+    position:fixed;
+    z-index:98;
+    background: #fff;
+    display:none;   
+}
+
+#mdWindow>.mdClose{
+    top:-15px;
+    right: -15px;
+}

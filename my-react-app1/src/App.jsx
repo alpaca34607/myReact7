@@ -1,71 +1,61 @@
-import { useEffect } from 'react';
-import $ from 'jquery';
-export default function App() {
-  useEffect(() => {
-    //初始化
-    // 移入 => mouseover()
-    // 移出 => mouseout()
-    // 移動 => mousemove()
-    // x、y座標 => pageX、pageY
-    // 取得HTML內容=html()
-    // 淡入 => fadeIn()
-    // 淡出=> fadeOut()
-    // 速度 =>毫秒 => (slow, normal, fast)
-    // 尋找指定的名稱 => has()
-    // 新增html元素 => append()
-    // 取得子元素 => children()
+import React, { useState, useEffect } from "react";
 
-    $('a:has(.ttpShow)')
-      .on('mouseover', function (e) {
-        $('body').append('<div id="ttpPanel">' + $(this).children('.ttpShow').html() + '</div>'
-        );
-        $('#ttpPanel')
-          .css({
-            top: (e.pageY + 10) + 'px',
-            left:( e.pageX + 10) + 'px',
-          })
-          .fadeIn('fast');
-      })
-      .on('mouseout', function () {
-        $('#ttpPanel').remove();
-      })
-      .on('mousemove', function (e) {
-        $('#ttpPanel').css({
-          top: (e.pageY + 10 )+ 'px',
-          left: (e.pageX + 10) + 'px',
-        });
-      });
-  }, []);
+import "./App.css";
+
+export default function App() {
+  // 建立目前背景圖的變數
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const slides = [
+    { url: "./images2/01.jpg", text: "第一張圖" },
+    { url: "./images2/02.jpg", text: "第二張圖" },
+    { url: "./images2/03.jpg", text: "第三張圖" },
+    { url: "./images2/04.jpg", text: "第四張圖" },
+  ];
+
+  // 當currentImgIndex改變時,會觸發useEffect
+  //Interval多久時間跳下一張
+  useEffect(() => {
+    const autoplay = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => clearInterval(autoplay);
+  }, [currentImgIndex]);
+  //下一張
+  const nextSlide = () => {
+    // 取得前一張的索引編號，檢查是否為最後一張最後一個編號
+    // 是=>回到第一張
+    // 否=>跳到下一張
+    setCurrentImgIndex((prevIndex) =>
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <>
-      <h2>ToolTip顯示說明</h2>
-      <p>
-        Lorem ipsum dolor sit amet,
-        <a href='#'>
-          consectetur
-          <span className='ttpShow'>consectetur內容說明...</span>
-        </a>
-        fugit cum in nisi recusandae omnis dicta ipsa esse explicabo. Eum
-        voluptatum mollitia quasi debitis molestias beatae vel laudantium eos
-        ullam possimus veritatis in
-        <a href='#'>
-          123456consectetur
-          <span className='ttpShow'>
-            <img
-              src=''
-              alt=''
-              style={{
-                width: '100px',
-              }}
-            />
-          </span>
-        </a>
-        reiciendis perferendis dolorum, aliquid et soluta ducimus voluptas atque
-        qui repellendus alias, accusamus quia sed? Quasi sapiente mollitia
-        quaerat assumenda impedit. Ipsa eum aliquid architecto corporis
-        aspernatur inventore ipsam illum deserunt doloribus ex accusantium, et
-      </p>
+      {/* 最外層 */}
+      <div
+        className="wrapper"
+        style={{
+          border: "1px solid red",
+          maxWidth: "100vw",
+          height: "100vh",
+          margin: "auto",
+        }}
+      >
+        {/* 滿版背景輪播區 */}
+        <div
+          style={{
+            backgroundImage: `url(${slides[currentImgIndex].url})`,
+            width: "100%",
+            height: "100%",
+            backgroundSize: "cover",
+            margin: "auto",
+          }}
+        >
+          <h2 style={{ color: "white", margin: "0"}}>{slides[currentImgIndex].text}</h2>
+        </div>
+      </div>
+      背景輪播
     </>
   );
 }
